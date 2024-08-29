@@ -35,12 +35,14 @@ ENV_DIR=$3
 topic "ENV_DIR"
 ls -hal $ENV_DIR | indent
 
-topic "Environment variables"
+topic "Environment variables (in env dir)"
 if [ -d "$ENV_DIR" ]; then
   for e in $(ls $ENV_DIR); do
     echo "       $e=$(cat $ENV_DIR/$e)"
   done
 fi
+
+./bin/echo_env
 
 topic "Release-phase setup"
 mkdir -p $BUILD_DIR/bin
