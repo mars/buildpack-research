@@ -18,6 +18,8 @@ heroku logs -t
 Example output
 --------------
 
+This example has [Runtime Dyno Metadata](https://devcenter.heroku.com/articles/dyno-metadata) lab enabled.
+
 ### Build
 
 ```
@@ -40,7 +42,7 @@ remote:        -rw------- 1 u42856 dyno    2 Sep  6 05:00 HEROKU_RELEASE_VERSIO
 remote:        -rw------- 1 u42856 dyno   40 Sep  6 05:00 HEROKU_SLUG_COMMIT
 remote:        -rw------- 1 u42856 dyno   14 Sep  6 05:00 HEROKU_SLUG_DESCRIPTION
 remote:        -rw------- 1 u42856 dyno    4 Sep  6 05:00 I_AM_VARIABLE
-remote: -----> Environment variables
+remote: -----> Environment variables (in env dir)
 remote:        HEROKU_APP_ID=9b716fdd-b761-45cb-891a-f87779353659
 remote:        HEROKU_APP_NAME=buildpack-research
 remote:        HEROKU_RELEASE_CREATED_AT=2016-08-15T22:52:37Z
@@ -48,6 +50,18 @@ remote:        HEROKU_RELEASE_VERSION=v4
 remote:        HEROKU_SLUG_COMMIT=a24b0c07938f5d80ccd8a7f40cf8b5f2c43ba2ac
 remote:        HEROKU_SLUG_DESCRIPTION=Deploy a24b0c0
 remote:        I_AM_VARIABLE=true
+remote: -----> Environment variables
+remote:        PWD=/tmp/codon/tmp/buildpacks/27accf60396a3107ccfdb1533ea03ad9002b22b9
+remote:        HOME=/app
+remote:        LANG=en_US.UTF-8
+remote:        SOURCE_VERSION=a5b544caf4fc6fd7cd3b6069ff51acc766b8d406
+remote:        REQUEST_ID=68ce29f1-580e-763e-501b-2fd3681a8415
+remote:        SHLVL=1
+remote:        BUILDPACK_LOG_FILE=/dev/null
+remote:        STACK=heroku-22
+remote:        PATH=/usr/local/bin:/usr/bin:/bin
+remote:        DYNO=run.7763
+remote:        _=/usr/bin/env
 remote: -----> Release-phase setup
 remote: -----> .profile.d/ setup
 remote: -----> Discovering process types
